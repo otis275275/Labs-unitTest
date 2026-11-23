@@ -1,0 +1,14 @@
+daysLate,tier,expected
+# Đặc tả: NORMAL 2.000đ/ngày, không có ngày ân hạn. VIP được ân hạn 2 ngày, sau đó 1.000đ/ngày. Phí tối đa 50.000đ.
+# BÀI 1: thay mỗi dấu ? bằng số tiền đúng theo đặc tả. Tự tính tay, không chạy code để lấy kết quả.
+0,NORMAL,0
+1,NORMAL,2000
+24,NORMAL,?
+25,NORMAL,?
+26,NORMAL,?
+0,VIP,0
+2,VIP,?
+3,VIP,?
+51,VIP,?
+52,VIP,?
+53,VIP,?
