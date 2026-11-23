@@ -3,12 +3,12 @@ daysLate,tier,expected
 # BÀI 1: thay mỗi dấu ? bằng số tiền đúng theo đặc tả. Tự tính tay, không chạy code để lấy kết quả.
 0,NORMAL,0
 1,NORMAL,2000
-24,NORMAL,?
-25,NORMAL,?
-26,NORMAL,?
+24,NORMAL,48000
+25,NORMAL,50000
+26,NORMAL,50000
 0,VIP,0
-2,VIP,?
-3,VIP,?
-51,VIP,?
-52,VIP,?
-53,VIP,?
+2,VIP,0
+3,VIP,1000
+51,VIP,49000
+52,VIP,50000
+53,VIP,50000

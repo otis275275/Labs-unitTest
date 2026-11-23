@@ -50,12 +50,18 @@ class LoanServiceTest {
     // BÀI 2a: thành viên đang mượn đủ số cuốn tối đa thì bị từ chối với mã LIMIT_REACHED.
     // Gợi ý: làm giống các test ở trên (availableBook, member, when(loans.countActiveByMemberId(1))..., assertCode).
     @Test void daDatHanMuc() {
-        // TODO
+        availableBook(); member(BigDecimal.ZERO);
+        when(loans.countActiveByMemberId(1)).thenReturn(3L);
+        assertCode(LIMIT_REACHED);
+        verify(books, never()).save(any());
     }
 
     // BÀI 2b: thành viên còn nợ phí thì bị từ chối với mã UNPAID_FINE.
     @Test void conPhiChuaTra() {
-        // TODO
+        availableBook(); member(BigDecimal.valueOf(10_000));
+        when(loans.countActiveByMemberId(1)).thenReturn(1L);
+        assertCode(UNPAID_FINE);
+        verify(books, never()).save(any());
     }
 
     @Test void muonThanhCongKhiDangMuonHaiCuon() {

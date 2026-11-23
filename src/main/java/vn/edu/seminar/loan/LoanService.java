@@ -25,7 +25,7 @@ public class LoanService {
             throw new LoanException(BOOK_UNAVAILABLE);
         }
         Member member = members.findById(memberId).orElseThrow(() -> new LoanException(MEMBER_NOT_FOUND));
-        if (loans.countActiveByMemberId(memberId) > 3) {
+        if (loans.countActiveByMemberId(memberId) >= 3) {
             throw new LoanException(LIMIT_REACHED);
         }
         if (member.unpaidFine().compareTo(BigDecimal.ZERO) > 0) {
